@@ -1,7 +1,7 @@
 package state
 
 import (
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // State is the collection of all state interfaces.

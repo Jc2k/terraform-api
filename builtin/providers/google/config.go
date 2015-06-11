@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/hashicorp/terraform/helper/pathorcontents"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/helper/pathorcontents"
+	"github.com/xanzy/terraform-api/terraform"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
 	"golang.org/x/oauth2/jwt"

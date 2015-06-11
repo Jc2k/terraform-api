@@ -3,8 +3,8 @@ package diff
 import (
 	"strings"
 
-	"github.com/hashicorp/terraform/flatmap"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/flatmap"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // AttrType is an enum that tells the ResourceBuilder what type of attribute

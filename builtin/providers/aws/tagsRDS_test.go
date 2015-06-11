@@ -6,8 +6,8 @@ import (
 	"testing"
 
 	"github.com/aws/aws-sdk-go/service/rds"
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/helper/resource"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestDiffRDSTags(t *testing.T) {

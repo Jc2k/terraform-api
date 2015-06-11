@@ -5,7 +5,7 @@ import (
 	"log"
 	"strings"
 
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func resourceAwsKeyPairMigrateState(

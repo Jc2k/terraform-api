@@ -1,7 +1,7 @@
 package terraform
 
 import (
-	"github.com/hashicorp/terraform/config"
+	"github.com/xanzy/terraform-api/config"
 )
 
 // EvalCountFixZeroOneBoundary is an EvalNode that fixes up the state

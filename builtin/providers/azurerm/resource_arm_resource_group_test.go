@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/Azure/azure-sdk-for-go/core/http"
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/helper/resource"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestAccAzureRMResourceGroup_basic(t *testing.T) {

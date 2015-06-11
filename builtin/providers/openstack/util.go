@@ -3,8 +3,8 @@ package openstack
 import (
 	"fmt"
 
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/rackspace/gophercloud"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 // CheckDeleted checks the error to see if it's a 404 (Not Found) and, if so,

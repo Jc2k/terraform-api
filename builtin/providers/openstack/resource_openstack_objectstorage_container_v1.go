@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/rackspace/gophercloud/openstack/objectstorage/v1/containers"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceObjectStorageContainerV1() *schema.Resource {

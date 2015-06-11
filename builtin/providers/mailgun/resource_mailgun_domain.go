@@ -5,9 +5,9 @@ import (
 	"log"
 	"time"
 
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/pearkes/mailgun"
+	"github.com/xanzy/terraform-api/helper/resource"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceMailgunDomain() *schema.Resource {

@@ -7,9 +7,9 @@ import (
 	"os"
 	"strings"
 
-	"github.com/hashicorp/terraform/state"
-	"github.com/hashicorp/terraform/state/remote"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/state"
+	"github.com/xanzy/terraform-api/state/remote"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // remoteCommandConfig is used to encapsulate our configuration

@@ -1,8 +1,6 @@
 package terraform
 
-import (
-	"github.com/hashicorp/terraform/dag"
-)
+import "github.com/xanzy/terraform-api/dag"
 
 type GraphNodeDestroyMode byte
 

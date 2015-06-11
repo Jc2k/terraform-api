@@ -5,8 +5,8 @@ import (
 	"log"
 	"strings"
 
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/soniah/dnsmadeeasy"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceDMERecord() *schema.Resource {

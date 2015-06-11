@@ -1,0 +1,120 @@
+syntax = "proto3";
+
+package pb;
+
+// Interface exported by the server.
+service Terraform {
+  // Build or update the infrastructure
+  rpc Apply(ApplyRequest) returns (stream ApplyResponse) {}
+
+  // Generate a diff and execution plan
+  rpc Plan(PlanRequest) returns (PlanResponse) {}
+
+  // Update the state against real resources
+  rpc Refresh(RefreshRequest) returns (RefreshResponse) {}
+
+  // Get a new empty state
+  rpc State(StateRequest) returns (StateResponse) {}
+
+  // Mark a resource for recreation
+  rpc Taint(TaintRequest) returns (TaintResponse) {}
+
+  // Validate a Terraform configuration
+  rpc Validate(ValidateRequest) returns (ValidateResponse) {}
+}
+
+// ApplyRequest represents a apply request
+message ApplyRequest {
+  bytes config = 1;
+  bool destroy = 2;
+  bytes plan = 3;
+  bool refresh = 4;
+  bytes state = 5;
+  int32 parallelism = 6;
+}
+
+enum ResourceState {
+  StateUnknown = 0;
+  StateRunning = 1;
+  StateProvisioning = 2;
+  StateSuccess = 3;
+  StateError = 4;
+}
+
+// ApplyResponse represents a apply response
+message ApplyResponse {
+  bytes state = 1;
+  map<string, ResourceState> states = 2;
+  repeated string errors = 3;
+}
+
+// PlanRequest represents a plan request
+message PlanRequest {
+  bytes config = 1;
+  bool destroy = 2;
+  bool refresh = 3;
+  bytes state = 4;
+  int32 parallelism = 5;
+}
+
+enum ResourceAction {
+  ActionUnknown = 0;
+  ActionNone = 1;
+  ActionCreate = 2;
+  ActionUpdate = 3;
+  ActionDestroy = 4;
+  ActionRecreate = 5;
+}
+
+// PlanResponse represents a plan response
+message PlanResponse {
+  bytes diff = 1;
+  map<string, ResourceAction> actions = 2;
+  bytes plan = 3;
+  bytes state = 4;
+  repeated string warnings = 5;
+}
+
+// RefreshRequest represents a refresh request
+message RefreshRequest {
+  bytes config = 1;
+  bytes state = 2;
+  int32 parallelism = 3;
+}
+
+// RefreshResponse represents a refresh response
+message RefreshResponse {
+  bytes state = 1;
+}
+
+// StateRequest represents a new state request
+message StateRequest {}
+
+// StateResponse represents a new state response
+message StateResponse {
+  bytes state = 1;
+}
+
+// TaintRequest represents a taint request
+message TaintRequest {
+  string module = 1;
+  string resource = 2;
+  bytes state = 3;
+}
+
+// TaintResponse represents a taint response
+message TaintResponse {
+  bytes state = 1;
+}
+
+// ValidateRequest represents a validation request
+message ValidateRequest {
+  bytes config = 1;
+}
+
+// ValidateResponse represents a validation response
+message ValidateResponse {
+  bool valid = 1;
+  repeated string warnings = 2;
+  repeated string errors = 3;
+}

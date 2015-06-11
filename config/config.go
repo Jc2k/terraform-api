@@ -9,11 +9,11 @@ import (
 	"strings"
 
 	"github.com/hashicorp/go-multierror"
-	"github.com/hashicorp/terraform/config/lang"
-	"github.com/hashicorp/terraform/config/lang/ast"
-	"github.com/hashicorp/terraform/flatmap"
 	"github.com/mitchellh/mapstructure"
 	"github.com/mitchellh/reflectwalk"
+	"github.com/xanzy/terraform-api/config/lang"
+	"github.com/xanzy/terraform-api/config/lang/ast"
+	"github.com/xanzy/terraform-api/flatmap"
 )
 
 // NameRegexp is the regular expression that all names (modules, providers,

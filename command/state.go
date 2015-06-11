@@ -7,9 +7,9 @@ import (
 	"strings"
 
 	"github.com/hashicorp/errwrap"
-	"github.com/hashicorp/terraform/state"
-	"github.com/hashicorp/terraform/state/remote"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/state"
+	"github.com/xanzy/terraform-api/state/remote"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // StateOpts are options to get the state for a command.

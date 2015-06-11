@@ -1,8 +1,8 @@
 package command
 
 import (
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/cli"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // Config is a structure used to configure many commands with Terraform

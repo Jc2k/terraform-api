@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	tfrpc "github.com/hashicorp/terraform/rpc"
-	"github.com/hashicorp/terraform/terraform"
+	tfrpc "github.com/xanzy/terraform-api/rpc"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func helperProcess(s ...string) *exec.Cmd {

@@ -1,7 +1,7 @@
 package aws
 
 import (
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 
 	"github.com/aws/aws-sdk-go/aws"
 )

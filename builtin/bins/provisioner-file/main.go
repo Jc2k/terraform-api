@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/hashicorp/terraform/builtin/provisioners/file"
-	"github.com/hashicorp/terraform/plugin"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/builtin/provisioners/file"
+	"github.com/xanzy/terraform-api/plugin"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package rpc
 import (
 	"net/rpc"
 
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // ResourceProvider is an implementation of terraform.ResourceProvider

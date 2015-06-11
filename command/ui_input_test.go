@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestUIInput_impl(t *testing.T) {

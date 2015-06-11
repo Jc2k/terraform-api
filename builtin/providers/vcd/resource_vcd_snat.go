@@ -3,7 +3,7 @@ package vcd
 import (
 	"fmt"
 
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceVcdSNAT() *schema.Resource {

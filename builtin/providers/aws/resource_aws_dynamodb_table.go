@@ -7,13 +7,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/helper/schema"
-
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/awserr"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
-	"github.com/hashicorp/terraform/helper/hashcode"
+	"github.com/xanzy/terraform-api/helper/hashcode"
+	"github.com/xanzy/terraform-api/helper/resource"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 // Number of times to retry if a throttling-related exception occurs

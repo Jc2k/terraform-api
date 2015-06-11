@@ -1,8 +1,8 @@
 package packet
 
 import (
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/packethost/packngo"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourcePacketProject() *schema.Resource {

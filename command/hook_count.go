@@ -3,7 +3,7 @@ package command
 import (
 	"sync"
 
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // CountHook is a hook that counts the number of resources

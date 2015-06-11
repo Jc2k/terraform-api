@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/Azure/azure-sdk-for-go/arm/network"
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/resource"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceArmPublicIp() *schema.Resource {

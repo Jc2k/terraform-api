@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/rackspace/gophercloud/openstack/compute/v2/extensions/keypairs"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceComputeKeypairV2() *schema.Resource {

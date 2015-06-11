@@ -8,8 +8,8 @@ import (
 	"google.golang.org/api/compute/v1"
 	"google.golang.org/api/googleapi"
 
-	"github.com/hashicorp/terraform/helper/hashcode"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/hashcode"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceComputeInstanceGroupManager() *schema.Resource {

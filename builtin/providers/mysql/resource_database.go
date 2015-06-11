@@ -7,7 +7,7 @@ import (
 
 	mysqlc "github.com/ziutek/mymysql/mysql"
 
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 const defaultCharacterSetKeyword = "CHARACTER SET "

@@ -4,8 +4,8 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/lib/pq"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourcePostgresqlRole() *schema.Resource {

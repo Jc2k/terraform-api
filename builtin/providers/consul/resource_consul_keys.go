@@ -7,8 +7,8 @@ import (
 	"strconv"
 
 	consulapi "github.com/hashicorp/consul/api"
-	"github.com/hashicorp/terraform/helper/hashcode"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/hashcode"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceConsulKeys() *schema.Resource {

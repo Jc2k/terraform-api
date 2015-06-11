@@ -1,7 +1,7 @@
 package terraform
 
 import (
-	"github.com/hashicorp/terraform/config"
+	"github.com/xanzy/terraform-api/config"
 )
 
 // EvalInterpolate is an EvalNode implementation that takes a raw

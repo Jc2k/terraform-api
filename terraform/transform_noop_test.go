@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform/dag"
+	"github.com/xanzy/terraform-api/dag"
 )
 
 func TestPruneNoopTransformer(t *testing.T) {

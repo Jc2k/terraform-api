@@ -3,7 +3,7 @@ package terraform
 import (
 	"sync"
 
-	"github.com/hashicorp/terraform/config"
+	"github.com/xanzy/terraform-api/config"
 )
 
 // EvalContext is the interface that is given to eval nodes to execute.

@@ -6,10 +6,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/hashicorp/terraform/communicator"
-	"github.com/hashicorp/terraform/helper/config"
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/go-homedir"
+	"github.com/xanzy/terraform-api/communicator"
+	"github.com/xanzy/terraform-api/helper/config"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // ResourceProvisioner represents a file provisioner

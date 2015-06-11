@@ -2,6 +2,7 @@ package aws
 
 import (
 	"crypto/sha256"
+	"errors"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -12,10 +13,8 @@ import (
 	"github.com/aws/aws-sdk-go/service/lambda"
 	"github.com/mitchellh/go-homedir"
 
-	"errors"
-
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/resource"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceAwsLambdaFunction() *schema.Resource {

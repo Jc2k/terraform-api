@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hashicorp/terraform/state"
+	"github.com/xanzy/terraform-api/state"
 )
 
 type RemotePullCommand struct {

@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform/config/module"
+	"github.com/xanzy/terraform-api/config/module"
 )
 
 func TestConfigTransformer_nilModule(t *testing.T) {

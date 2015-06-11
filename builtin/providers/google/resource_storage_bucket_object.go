@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 
 	"google.golang.org/api/googleapi"
 	"google.golang.org/api/storage/v1"

@@ -5,9 +5,9 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/hashicorp/terraform/config/lang"
-	"github.com/hashicorp/terraform/config/lang/ast"
 	"github.com/mitchellh/reflectwalk"
+	"github.com/xanzy/terraform-api/config/lang"
+	"github.com/xanzy/terraform-api/config/lang/ast"
 )
 
 // interpolationWalker implements interfaces for the reflectwalk package

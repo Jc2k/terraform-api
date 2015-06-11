@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/config"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestProvider_impl(t *testing.T) {

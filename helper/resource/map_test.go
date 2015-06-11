@@ -4,9 +4,9 @@ import (
 	"reflect"
 	"testing"
 
-	tfconfig "github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/helper/config"
-	"github.com/hashicorp/terraform/terraform"
+	tfconfig "github.com/xanzy/terraform-api/config"
+	"github.com/xanzy/terraform-api/helper/config"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestMapResources(t *testing.T) {

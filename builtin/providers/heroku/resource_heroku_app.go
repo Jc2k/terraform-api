@@ -6,7 +6,7 @@ import (
 
 	"github.com/cyberdelia/heroku-go/v3"
 	"github.com/hashicorp/go-multierror"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 // herokuApplication is a value type used to hold the details of an

@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/Azure/azure-sdk-for-go/management/sql"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 // resourceAzureSqlDatabaseService returns the *schema.Resource

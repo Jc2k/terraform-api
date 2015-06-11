@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/pearkes/dnsimple"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceDNSimpleRecord() *schema.Resource {

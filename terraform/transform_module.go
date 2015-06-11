@@ -2,7 +2,7 @@ package terraform
 
 import (
 	"fmt"
-	"github.com/hashicorp/terraform/dag"
+	"github.com/xanzy/terraform-api/dag"
 )
 
 // ModuleInputTransformer is a GraphTransformer that adds a node to the

@@ -8,10 +8,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/hashicorp/terraform/helper/pathorcontents"
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/mapstructure"
 	"github.com/xanzy/ssh-agent"
+	"github.com/xanzy/terraform-api/helper/pathorcontents"
+	"github.com/xanzy/terraform-api/terraform"
 	"golang.org/x/crypto/ssh"
 	"golang.org/x/crypto/ssh/agent"
 )

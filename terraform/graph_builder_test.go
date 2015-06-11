@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform/dag"
+	"github.com/xanzy/terraform-api/dag"
 )
 
 func TestBasicGraphBuilder_impl(t *testing.T) {

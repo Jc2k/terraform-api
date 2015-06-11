@@ -5,8 +5,8 @@ import (
 	"log"
 	"strings"
 
-	"github.com/hashicorp/terraform/helper/schema"
 	types "github.com/hmrc/vmware-govcd/types/v56"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceVcdFirewallRules() *schema.Resource {

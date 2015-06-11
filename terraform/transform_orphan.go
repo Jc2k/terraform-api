@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/config/module"
-	"github.com/hashicorp/terraform/dag"
+	"github.com/xanzy/terraform-api/config"
+	"github.com/xanzy/terraform-api/config/module"
+	"github.com/xanzy/terraform-api/dag"
 )
 
 // GraphNodeStateRepresentative is an interface that can be implemented by

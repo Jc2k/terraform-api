@@ -10,11 +10,11 @@ import (
 	"strconv"
 
 	"github.com/hashicorp/go-getter"
-	"github.com/hashicorp/terraform/config/module"
-	"github.com/hashicorp/terraform/state"
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/cli"
 	"github.com/mitchellh/colorstring"
+	"github.com/xanzy/terraform-api/config/module"
+	"github.com/xanzy/terraform-api/state"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // Meta are the meta-options that are available on all or most commands.

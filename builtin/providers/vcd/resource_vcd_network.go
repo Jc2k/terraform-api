@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hashicorp/terraform/helper/hashcode"
-	"github.com/hashicorp/terraform/helper/schema"
 	types "github.com/hmrc/vmware-govcd/types/v56"
+	"github.com/xanzy/terraform-api/helper/hashcode"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceVcdNetwork() *schema.Resource {

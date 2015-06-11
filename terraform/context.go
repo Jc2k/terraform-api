@@ -9,8 +9,8 @@ import (
 	"sync"
 
 	"github.com/hashicorp/go-multierror"
-	"github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/config/module"
+	"github.com/xanzy/terraform-api/config"
+	"github.com/xanzy/terraform-api/config/module"
 )
 
 // InputMode defines what sort of input will be asked for when Input

@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/xanzy/go-cloudstack/cloudstack"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 // UnlimitedResourceID is a "special" ID to define an unlimited resource

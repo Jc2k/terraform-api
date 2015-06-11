@@ -3,7 +3,7 @@ package template
 import (
 	"testing"
 
-	r "github.com/hashicorp/terraform/helper/resource"
+	r "github.com/xanzy/terraform-api/helper/resource"
 )
 
 func TestRender(t *testing.T) {

@@ -2,8 +2,8 @@ package atlas
 
 import (
 	"github.com/hashicorp/atlas-go/v1"
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/helper/schema"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 const (

@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/dag"
-	"github.com/hashicorp/terraform/dot"
+	"github.com/xanzy/terraform-api/config"
+	"github.com/xanzy/terraform-api/dag"
+	"github.com/xanzy/terraform-api/dot"
 )
 
 // GraphNodeCountDependent is implemented by resources for giving only

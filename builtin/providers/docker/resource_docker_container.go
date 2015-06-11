@@ -3,11 +3,10 @@ package docker
 import (
 	"bytes"
 	"fmt"
-
 	"regexp"
 
-	"github.com/hashicorp/terraform/helper/hashcode"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/hashcode"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceDockerContainer() *schema.Resource {

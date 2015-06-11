@@ -7,8 +7,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/mitchellh/go-homedir"
+	"github.com/xanzy/terraform-api/helper/schema"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/awserr"

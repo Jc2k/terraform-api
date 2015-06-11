@@ -5,7 +5,7 @@ import (
 	"encoding/pem"
 	"fmt"
 
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func decodePEM(d *schema.ResourceData, pemKey, pemType string) (*pem.Block, error) {

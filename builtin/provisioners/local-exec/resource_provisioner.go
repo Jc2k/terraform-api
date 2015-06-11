@@ -7,9 +7,9 @@ import (
 	"runtime"
 
 	"github.com/armon/circbuf"
-	"github.com/hashicorp/terraform/helper/config"
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/go-linereader"
+	"github.com/xanzy/terraform-api/helper/config"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 const (

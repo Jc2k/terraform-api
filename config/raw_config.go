@@ -5,10 +5,10 @@ import (
 	"encoding/gob"
 	"sync"
 
-	"github.com/hashicorp/terraform/config/lang"
-	"github.com/hashicorp/terraform/config/lang/ast"
 	"github.com/mitchellh/copystructure"
 	"github.com/mitchellh/reflectwalk"
+	"github.com/xanzy/terraform-api/config/lang"
+	"github.com/xanzy/terraform-api/config/lang/ast"
 )
 
 // UnknownVariableValue is a sentinel value that can be used

@@ -52,7 +52,7 @@ updatedeps:
 	go get -u golang.org/x/tools/cmd/stringer
 	go list ./... \
 		| xargs go list -f '{{join .Deps "\n"}}' \
-		| grep -v github.com/hashicorp/terraform \
+		| grep -v github.com/xanzy/terraform-api \
 		| grep -v '/internal/' \
 		| sort -u \
 		| xargs go get -f -u -v

@@ -4,8 +4,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/helper/schema"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // To run these acceptance tests, you will need a Rundeck server.

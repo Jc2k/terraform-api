@@ -3,8 +3,8 @@ package command
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform/state"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/state"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestStateHook_impl(t *testing.T) {

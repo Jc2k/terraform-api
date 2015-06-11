@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/hashicorp/terraform/config/module"
+	"github.com/xanzy/terraform-api/config/module"
 )
 
 // GetCommand is a Command implementation that takes a Terraform

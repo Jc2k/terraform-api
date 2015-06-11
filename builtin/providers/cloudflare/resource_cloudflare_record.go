@@ -5,8 +5,8 @@ import (
 	"log"
 	"strings"
 
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/pearkes/cloudflare"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceCloudFlareRecord() *schema.Resource {

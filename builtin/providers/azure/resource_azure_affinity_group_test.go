@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/Azure/azure-sdk-for-go/management"
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/helper/resource"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestAccAzureAffinityGroupBasic(t *testing.T) {

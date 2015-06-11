@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/Azure/azure-sdk-for-go/management/sql"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 // resourceAzureDatabaseServer returns the *schema.Resource associated

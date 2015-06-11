@@ -3,8 +3,8 @@ package diff
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/config"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestResourceBuilder_attrSetComputed(t *testing.T) {

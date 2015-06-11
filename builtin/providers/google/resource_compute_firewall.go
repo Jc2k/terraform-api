@@ -6,8 +6,8 @@ import (
 	"log"
 	"sort"
 
-	"github.com/hashicorp/terraform/helper/hashcode"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/hashcode"
+	"github.com/xanzy/terraform-api/helper/schema"
 	"google.golang.org/api/compute/v1"
 	"google.golang.org/api/googleapi"
 )

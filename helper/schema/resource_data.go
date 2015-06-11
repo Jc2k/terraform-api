@@ -5,7 +5,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // ResourceData is used to query and set the attributes of a resource.

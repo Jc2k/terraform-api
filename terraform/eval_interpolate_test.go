@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/hashicorp/terraform/config"
+	"github.com/xanzy/terraform-api/config"
 )
 
 func TestEvalInterpolate_impl(t *testing.T) {

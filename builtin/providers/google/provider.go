@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/hashicorp/terraform/helper/pathorcontents"
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/helper/pathorcontents"
+	"github.com/xanzy/terraform-api/helper/schema"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // Provider returns a terraform.ResourceProvider.

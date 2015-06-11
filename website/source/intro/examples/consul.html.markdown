@@ -8,7 +8,7 @@ description: |-
 
 # Consul Example
 
-[**Example Contents**](https://github.com/hashicorp/terraform/tree/master/examples/consul)
+[**Example Contents**](https://github.com/xanzy/terraform-api/tree/master/examples/consul)
 
 [Consul](https://www.consul.io) is a tool for service discovery, configuration
 and orchestration. The Key/Value store it provides is often used to store

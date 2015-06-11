@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/hashicorp/errwrap"
-	"github.com/hashicorp/terraform/config"
 	"github.com/mitchellh/mapstructure"
+	"github.com/xanzy/terraform-api/config"
 )
 
 // EvalSetVariables is an EvalNode implementation that sets the variables

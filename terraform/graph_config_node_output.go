@@ -3,8 +3,8 @@ package terraform
 import (
 	"fmt"
 
-	"github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/dag"
+	"github.com/xanzy/terraform-api/config"
+	"github.com/xanzy/terraform-api/dag"
 )
 
 // GraphNodeConfigOutput represents an output configured within the

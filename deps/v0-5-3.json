@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/hashicorp/terraform",
+	"ImportPath": "github.com/xanzy/terraform-api",
 	"GoVersion": "go1.4.2",
 	"Deps": [
 		{

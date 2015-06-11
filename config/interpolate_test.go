@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/hashicorp/terraform/config/lang"
+	"github.com/xanzy/terraform-api/config/lang"
 )
 
 func TestNewInterpolatedVariable(t *testing.T) {

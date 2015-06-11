@@ -11,7 +11,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/hashicorp/terraform/config"
+	"github.com/xanzy/terraform-api/config"
 )
 
 const (

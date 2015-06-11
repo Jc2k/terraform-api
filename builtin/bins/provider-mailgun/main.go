@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/hashicorp/terraform/builtin/providers/mailgun"
-	"github.com/hashicorp/terraform/plugin"
+	"github.com/xanzy/terraform-api/builtin/providers/mailgun"
+	"github.com/xanzy/terraform-api/plugin"
 )
 
 func main() {

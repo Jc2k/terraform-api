@@ -16,8 +16,8 @@ import (
 	"strings"
 
 	"github.com/apparentlymart/go-cidr/cidr"
-	"github.com/hashicorp/terraform/config/lang/ast"
 	"github.com/mitchellh/go-homedir"
+	"github.com/xanzy/terraform-api/config/lang/ast"
 )
 
 // Funcs is the mapping of built-in functions for configuration.

@@ -12,8 +12,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform/communicator/remote"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/communicator/remote"
+	"github.com/xanzy/terraform-api/terraform"
 	"golang.org/x/crypto/ssh"
 )
 

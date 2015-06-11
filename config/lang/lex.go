@@ -7,7 +7,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/hashicorp/terraform/config/lang/ast"
+	"github.com/xanzy/terraform-api/config/lang/ast"
 )
 
 //go:generate go tool yacc -p parser lang.y

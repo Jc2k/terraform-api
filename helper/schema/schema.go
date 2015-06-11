@@ -19,8 +19,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/mapstructure"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // Schema is used to describe the structure of a value.

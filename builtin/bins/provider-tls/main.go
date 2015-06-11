@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/hashicorp/terraform/builtin/providers/tls"
-	"github.com/hashicorp/terraform/plugin"
+	"github.com/xanzy/terraform-api/builtin/providers/tls"
+	"github.com/xanzy/terraform-api/plugin"
 )
 
 func main() {

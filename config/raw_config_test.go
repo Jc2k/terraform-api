@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/hashicorp/terraform/config/lang/ast"
+	"github.com/xanzy/terraform-api/config/lang/ast"
 )
 
 func TestNewRawConfig(t *testing.T) {

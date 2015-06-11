@@ -6,14 +6,13 @@ import (
 	"log"
 	"time"
 
-	"github.com/hashicorp/terraform/helper/hashcode"
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/helper/schema"
-
 	"github.com/rackspace/gophercloud"
 	"github.com/rackspace/gophercloud/openstack/networking/v2/extensions/lbaas/members"
 	"github.com/rackspace/gophercloud/openstack/networking/v2/extensions/lbaas/pools"
 	"github.com/rackspace/gophercloud/pagination"
+	"github.com/xanzy/terraform-api/helper/hashcode"
+	"github.com/xanzy/terraform-api/helper/resource"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceLBPoolV1() *schema.Resource {

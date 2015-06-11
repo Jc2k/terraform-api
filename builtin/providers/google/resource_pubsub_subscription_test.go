@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/hashicorp/terraform/helper/acctest"
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/helper/acctest"
+	"github.com/xanzy/terraform-api/helper/resource"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestAccPubsubSubscriptionCreate(t *testing.T) {
@@ -71,4 +71,5 @@ resource "google_pubsub_topic" "foobar_sub" {
 resource "google_pubsub_subscription" "foobar_sub" {
 	name = "pssub-test-%s"
 	topic = "${google_pubsub_topic.foobar_sub.name}"
+
 }`, acctest.RandString(10), acctest.RandString(10))

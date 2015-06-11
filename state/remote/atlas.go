@@ -14,7 +14,7 @@ import (
 	"strings"
 
 	"github.com/hashicorp/go-retryablehttp"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 const (

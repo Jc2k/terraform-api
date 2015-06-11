@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/Azure/azure-sdk-for-go/management/sql"
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/helper/resource"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestAccAzureSqlDatabaseServerFirewallRuleBasic(t *testing.T) {

@@ -3,8 +3,8 @@ package openstack
 import (
 	"os"
 
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/helper/schema"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // Provider returns a schema.Provider for OpenStack.

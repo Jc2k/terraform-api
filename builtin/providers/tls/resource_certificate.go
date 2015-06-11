@@ -15,7 +15,7 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 const pemCertType = "CERTIFICATE"

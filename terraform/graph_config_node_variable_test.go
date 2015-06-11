@@ -3,7 +3,7 @@ package terraform
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform/dag"
+	"github.com/xanzy/terraform-api/dag"
 )
 
 func TestGraphNodeConfigVariable_impl(t *testing.T) {

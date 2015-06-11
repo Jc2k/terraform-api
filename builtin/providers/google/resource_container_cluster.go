@@ -7,8 +7,8 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/resource"
+	"github.com/xanzy/terraform-api/helper/schema"
 	"google.golang.org/api/container/v1"
 	"google.golang.org/api/googleapi"
 )

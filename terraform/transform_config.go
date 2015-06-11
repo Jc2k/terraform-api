@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	"github.com/hashicorp/go-multierror"
-	"github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/config/module"
+	"github.com/xanzy/terraform-api/config"
+	"github.com/xanzy/terraform-api/config/module"
 )
 
 // ConfigTransformer is a GraphTransformer that adds the configuration

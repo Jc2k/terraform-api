@@ -6,9 +6,9 @@ import (
 	"log"
 	"strings"
 
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/mitchellh/go-homedir"
 	"github.com/xanzy/go-cloudstack/cloudstack"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceCloudStackSSHKeyPair() *schema.Resource {

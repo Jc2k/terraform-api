@@ -3,8 +3,8 @@ package command
 import (
 	"fmt"
 
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/cli"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // Set to true when we're testing

@@ -3,7 +3,7 @@ package terraform
 import (
 	"strings"
 
-	"github.com/hashicorp/terraform/config"
+	"github.com/xanzy/terraform-api/config"
 )
 
 // EvalIgnoreChanges is an EvalNode implementation that removes diff

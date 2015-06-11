@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/hashicorp/terraform/config/module"
+	"github.com/xanzy/terraform-api/config/module"
 )
 
 func TestContext2Apply(t *testing.T) {

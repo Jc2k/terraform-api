@@ -3,7 +3,7 @@ package aws
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestAWSKeyPairMigrateState(t *testing.T) {

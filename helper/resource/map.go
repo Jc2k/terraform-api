@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // Map is a map of resources that are supported, and provides helpers for

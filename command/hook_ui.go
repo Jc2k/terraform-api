@@ -9,9 +9,9 @@ import (
 	"sync"
 	"unicode"
 
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/cli"
 	"github.com/mitchellh/colorstring"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 type UiHook struct {

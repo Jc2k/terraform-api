@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/config/module"
-	"github.com/hashicorp/terraform/dag"
-	"github.com/hashicorp/terraform/dot"
+	"github.com/xanzy/terraform-api/config"
+	"github.com/xanzy/terraform-api/config/module"
+	"github.com/xanzy/terraform-api/dag"
+	"github.com/xanzy/terraform-api/dot"
 )
 
 // GraphNodeConfigModule represents a module within the configuration graph.

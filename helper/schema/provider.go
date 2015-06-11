@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // Provider represents a resource provider in Terraform, and properly

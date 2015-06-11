@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/hashicorp/terraform/config/lang/ast"
+	"github.com/xanzy/terraform-api/config/lang/ast"
 )
 
 func TestEval(t *testing.T) {

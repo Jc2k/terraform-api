@@ -6,8 +6,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/colorstring"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // FormatStateOpts are the options for formatting a state.

@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	dc "github.com/fsouza/go-dockerclient"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceDockerImageCreate(d *schema.ResourceData, meta interface{}) error {

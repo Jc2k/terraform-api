@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/Azure/azure-sdk-for-go/management/sql"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 // resourceAzureSqlDatabaseServerFirewallRule returns the *schema.Resource

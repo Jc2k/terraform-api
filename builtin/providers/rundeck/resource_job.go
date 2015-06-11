@@ -3,7 +3,7 @@ package rundeck
 import (
 	"fmt"
 
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 
 	"github.com/apparentlymart/go-rundeck-api/rundeck"
 )

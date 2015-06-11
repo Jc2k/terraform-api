@@ -4,14 +4,14 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestDiffFieldReader_impl(t *testing.T) {
 	var _ FieldReader = new(DiffFieldReader)
 }
 
-// https://github.com/hashicorp/terraform/issues/914
+// https://github.com/xanzy/terraform-api/issues/914
 func TestDiffFieldReader_MapHandling(t *testing.T) {
 	schema := map[string]*Schema{
 		"tags": &Schema{

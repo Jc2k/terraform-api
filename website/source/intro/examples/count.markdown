@@ -8,7 +8,7 @@ description: |-
 
 # Count Example
 
-[**Example Contents**](https://github.com/hashicorp/terraform/tree/master/examples/aws-count)
+[**Example Contents**](https://github.com/xanzy/terraform-api/tree/master/examples/aws-count)
 
 The count parameter on resources can simplify configurations
 and let you scale resources by simply incrementing a number.

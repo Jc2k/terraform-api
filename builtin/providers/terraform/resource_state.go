@@ -4,8 +4,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/state/remote"
+	"github.com/xanzy/terraform-api/helper/schema"
+	"github.com/xanzy/terraform-api/state/remote"
 )
 
 func resourceRemoteState() *schema.Resource {

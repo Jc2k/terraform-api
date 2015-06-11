@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/Azure/azure-sdk-for-go/arm/storage"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceArmStorageAccount() *schema.Resource {

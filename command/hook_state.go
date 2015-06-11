@@ -3,8 +3,8 @@ package command
 import (
 	"sync"
 
-	"github.com/hashicorp/terraform/state"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/state"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // StateHook is a hook that continuously updates the state by calling

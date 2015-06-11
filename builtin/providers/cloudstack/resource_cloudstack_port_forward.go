@@ -9,8 +9,8 @@ import (
 	"strings"
 
 	"github.com/hashicorp/go-multierror"
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/xanzy/go-cloudstack/cloudstack"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceCloudStackPortForward() *schema.Resource {

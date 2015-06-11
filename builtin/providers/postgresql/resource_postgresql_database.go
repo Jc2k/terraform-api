@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/lib/pq"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourcePostgresqlDatabase() *schema.Resource {

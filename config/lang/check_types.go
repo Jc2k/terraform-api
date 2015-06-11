@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/hashicorp/terraform/config/lang/ast"
+	"github.com/xanzy/terraform-api/config/lang/ast"
 )
 
 // TypeCheck implements ast.Visitor for type checking an AST tree.

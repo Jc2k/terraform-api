@@ -5,9 +5,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/helper/schema"
 	types "github.com/hmrc/vmware-govcd/types/v56"
+	"github.com/xanzy/terraform-api/helper/resource"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func expandIPRange(configured []interface{}) types.IPRanges {

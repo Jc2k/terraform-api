@@ -9,7 +9,7 @@ import (
 	"sync"
 
 	"github.com/hashicorp/go-getter"
-	"github.com/hashicorp/terraform/config"
+	"github.com/xanzy/terraform-api/config"
 )
 
 // RootName is the name of the root tree.

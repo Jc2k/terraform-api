@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/cli"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestPlan(t *testing.T) {

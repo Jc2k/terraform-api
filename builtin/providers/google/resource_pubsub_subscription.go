@@ -3,7 +3,7 @@ package google
 import (
 	"fmt"
 
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 	"google.golang.org/api/pubsub/v1"
 )
 

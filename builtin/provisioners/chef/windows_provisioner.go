@@ -5,8 +5,8 @@ import (
 	"path"
 	"strings"
 
-	"github.com/hashicorp/terraform/communicator"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/communicator"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 const installScript = `

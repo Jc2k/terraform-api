@@ -9,9 +9,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/config/lang/ast"
-	"github.com/hashicorp/terraform/config/module"
+	"github.com/xanzy/terraform-api/config"
+	"github.com/xanzy/terraform-api/config/lang/ast"
+	"github.com/xanzy/terraform-api/config/module"
 )
 
 const (

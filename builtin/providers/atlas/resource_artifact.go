@@ -5,8 +5,8 @@ import (
 	"regexp"
 
 	"github.com/hashicorp/atlas-go/v1"
-	"github.com/hashicorp/terraform/helper/hashcode"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/hashcode"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 var (

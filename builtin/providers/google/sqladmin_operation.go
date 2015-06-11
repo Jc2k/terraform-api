@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/hashicorp/terraform/helper/resource"
+	"github.com/xanzy/terraform-api/helper/resource"
 	"google.golang.org/api/sqladmin/v1beta4"
 )
 

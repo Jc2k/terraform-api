@@ -7,7 +7,7 @@ import (
 
 	"github.com/Azure/azure-sdk-for-go/management"
 	"github.com/Azure/azure-sdk-for-go/management/virtualmachinedisk"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 const dataDiskBlobStorageURL = "http://%s.blob.core.windows.net/disks/%s.vhd"

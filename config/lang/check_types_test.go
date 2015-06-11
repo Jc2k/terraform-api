@@ -3,7 +3,7 @@ package lang
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform/config/lang/ast"
+	"github.com/xanzy/terraform-api/config/lang/ast"
 )
 
 func TestTypeCheck(t *testing.T) {

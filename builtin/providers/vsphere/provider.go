@@ -3,8 +3,8 @@ package vsphere
 import (
 	"fmt"
 
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/helper/schema"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // Provider returns a terraform.ResourceProvider.

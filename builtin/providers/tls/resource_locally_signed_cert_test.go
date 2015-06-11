@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	r "github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/terraform"
+	r "github.com/xanzy/terraform-api/helper/resource"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestLocallySignedCert(t *testing.T) {

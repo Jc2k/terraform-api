@@ -14,8 +14,8 @@ import (
 	"testing"
 
 	"github.com/hashicorp/go-getter"
-	"github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/config/module"
+	"github.com/xanzy/terraform-api/config"
+	"github.com/xanzy/terraform-api/config/module"
 )
 
 // This is the directory where our test fixtures are.

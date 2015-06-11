@@ -6,8 +6,8 @@ import (
 	"net"
 	"net/rpc"
 
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/hashicorp/yamux"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // Server listens for network connections and then dispenses interface

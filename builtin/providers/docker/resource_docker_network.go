@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/hashicorp/terraform/helper/hashcode"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/hashcode"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceDockerNetwork() *schema.Resource {

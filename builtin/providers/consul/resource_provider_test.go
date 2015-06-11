@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	consulapi "github.com/hashicorp/consul/api"
-	"github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/helper/schema"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/config"
+	"github.com/xanzy/terraform-api/helper/schema"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 var testAccProviders map[string]terraform.ResourceProvider

@@ -8,11 +8,11 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/config/lang"
-	"github.com/hashicorp/terraform/config/lang/ast"
-	"github.com/hashicorp/terraform/helper/pathorcontents"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/config"
+	"github.com/xanzy/terraform-api/config/lang"
+	"github.com/xanzy/terraform-api/config/lang/ast"
+	"github.com/xanzy/terraform-api/helper/pathorcontents"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceFile() *schema.Resource {

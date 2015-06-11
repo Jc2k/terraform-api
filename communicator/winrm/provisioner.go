@@ -7,8 +7,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/mapstructure"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 const (

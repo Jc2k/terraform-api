@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/hashicorp/terraform/config/lang/ast"
+	"github.com/xanzy/terraform-api/config/lang/ast"
 )
 
 type noopNode struct{}

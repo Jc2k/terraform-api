@@ -12,9 +12,9 @@ import (
 	"testing"
 
 	"github.com/hashicorp/go-getter"
-	"github.com/hashicorp/terraform/config/module"
-	"github.com/hashicorp/terraform/helper/logging"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/config/module"
+	"github.com/xanzy/terraform-api/helper/logging"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 const TestEnvVar = "TF_ACC"

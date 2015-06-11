@@ -1,0 +1,95 @@
+
+{
+  "config": {
+    "provider": {
+      "cloudstack": {
+        "api_url": "https://betacloud.mccx.schubergphilis.com/client/api",
+        "api_key": "WgufLJNp67ijEOMw4crfozrMyu7B6I-HiRUho1XIuo-7_tzMZ61TFm1EgL7InsUyY7kHFYYbMb5FToTg5EBjcw",
+        "secret_key": "iqUAVoUqDGZDLwI7JOs79hNV42Nr25zLFACFN-6ynkVaQkYyNX_to5cBoYbnj-4bA_FmxPYfkwWcVjuoJQl7cw"
+      }
+    },
+    "resource": {
+      "cloudstack_instance": {
+        "web1": {
+          "name": "server-1",
+          "service_offering": "employee-tiny",
+          "network": "svanharmelen-default",
+          "template": "CentOS 6_5 weekly-w2015-10 V2B27",
+          "zone": "BETA-SBP-DC-1",
+          "expunge": true
+        }
+      }
+    }
+  },
+  "state": {
+    "version": 1,
+    "serial": 0,
+    "modules": [
+      {
+        "path": [
+          "root"
+        ],
+        "outputs": {},
+        "resources": {}
+      }
+    ]
+  }
+}
+
+
+
+{
+  "config": {
+    "provider": {
+      "cloudstack": {
+        "api_url": "https://betacloud.mccx.schubergphilis.com/client/api",
+        "api_key": "WgufLJNp67ijEOMw4crfozrMyu7B6I-HiRUho1XIuo-7_tzMZ61TFm1EgL7InsUyY7kHFYYbMb5FToTg5EBjcw",
+        "secret_key": "iqUAVoUqDGZDLwI7JOs79hNV42Nr25zLFACFN-6ynkVaQkYyNX_to5cBoYbnj-4bA_FmxPYfkwWcVjuoJQl7cw"
+      }
+    },
+    "resource": {
+      "cloudstack_instance": {
+        "web1": {
+          "name": "server-1",
+          "service_offering": "employee-tiny",
+          "network": "svanharmelen-default",
+          "template": "CentOS 6_5 weekly-w2015-10 V2B27",
+          "zone": "BETA-SBP-DC-1",
+          "expunge": true
+        }
+      }
+    }
+  },
+  "state": {
+    "version": 1,
+    "serial": 0,
+    "modules": [
+      {
+        "path": [
+          "root"
+        ],
+        "outputs": {},
+        "resources": {
+          "cloudstack_instance.web1": {
+            "type": "cloudstack_instance",
+            "primary": {
+              "id": "f4033442-ef0b-4bd4-8a8c-94bee0d2dd92",
+              "attributes": {
+                "display_name": "server-1",
+                "expunge": "true",
+                "id": "f4033442-ef0b-4bd4-8a8c-94bee0d2dd92",
+                "ipaddress": "10.1.1.217",
+                "name": "server-2",
+                "network": "svanharmelen-default",
+                "project": "",
+                "service_offering": "employee-tiny",
+                "template": "CentOS 6_5 weekly-w2015-10 V2B27",
+                "zone": "BETA-SBP-DC-1"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 package docker
 
 import (
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceDockerImage() *schema.Resource {

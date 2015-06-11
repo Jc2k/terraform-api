@@ -3,7 +3,7 @@ package terraform
 import (
 	"log"
 
-	"github.com/hashicorp/terraform/config/module"
+	"github.com/xanzy/terraform-api/config/module"
 )
 
 // GraphBuilder is an interface that can be implemented and used with

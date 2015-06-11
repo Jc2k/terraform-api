@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestResourceApply_create(t *testing.T) {

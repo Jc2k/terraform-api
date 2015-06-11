@@ -7,8 +7,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/hashicorp/terraform/config/lang"
-	"github.com/hashicorp/terraform/config/lang/ast"
+	"github.com/xanzy/terraform-api/config/lang"
+	"github.com/xanzy/terraform-api/config/lang/ast"
 )
 
 func TestInterpolateFuncCompact(t *testing.T) {

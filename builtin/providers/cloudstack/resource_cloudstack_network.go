@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/xanzy/go-cloudstack/cloudstack"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceCloudStackNetwork() *schema.Resource {

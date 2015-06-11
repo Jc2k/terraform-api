@@ -3,7 +3,7 @@ package template
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func TestProvider(t *testing.T) {

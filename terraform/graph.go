@@ -6,7 +6,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/hashicorp/terraform/dag"
+	"github.com/xanzy/terraform-api/dag"
 )
 
 // RootModuleName is the name given to the root module implicitly.

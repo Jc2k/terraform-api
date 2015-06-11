@@ -3,7 +3,7 @@ package remote
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform/state"
+	"github.com/xanzy/terraform-api/state"
 )
 
 func TestState(t *testing.T) {

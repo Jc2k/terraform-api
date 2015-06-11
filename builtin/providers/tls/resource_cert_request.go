@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 const pemCertReqType = "CERTIFICATE REQUEST"

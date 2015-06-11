@@ -8,10 +8,10 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/hashicorp/terraform/config"
-	"github.com/hashicorp/terraform/config/lang/ast"
-	"github.com/hashicorp/terraform/helper/hashcode"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/config"
+	"github.com/xanzy/terraform-api/config/lang/ast"
+	"github.com/xanzy/terraform-api/helper/hashcode"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestEnvDefaultFunc(t *testing.T) {

@@ -3,7 +3,7 @@ package communicator
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestCommunicator_new(t *testing.T) {

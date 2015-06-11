@@ -3,7 +3,7 @@ package aws
 import (
 	"testing"
 
-	"github.com/hashicorp/terraform/helper/resource"
+	"github.com/xanzy/terraform-api/helper/resource"
 )
 
 func TestAccAWSIAMInstanceProfile_basic(t *testing.T) {

@@ -12,8 +12,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/colorstring"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 var defaultInputReader io.Reader

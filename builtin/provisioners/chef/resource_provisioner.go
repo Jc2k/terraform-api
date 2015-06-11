@@ -14,13 +14,13 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/hashicorp/terraform/communicator"
-	"github.com/hashicorp/terraform/communicator/remote"
-	"github.com/hashicorp/terraform/helper/pathorcontents"
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/go-homedir"
 	"github.com/mitchellh/go-linereader"
 	"github.com/mitchellh/mapstructure"
+	"github.com/xanzy/terraform-api/communicator"
+	"github.com/xanzy/terraform-api/communicator/remote"
+	"github.com/xanzy/terraform-api/helper/pathorcontents"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 const (

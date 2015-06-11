@@ -3,7 +3,7 @@ package rpc
 import (
 	"net/rpc"
 
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // UIOutput is an implementatin of terraform.UIOutput that communicates

@@ -12,7 +12,7 @@ import (
 	"strconv"
 	"sync/atomic"
 
-	tfrpc "github.com/hashicorp/terraform/rpc"
+	tfrpc "github.com/xanzy/terraform-api/rpc"
 )
 
 // The APIVersion is outputted along with the RPC address. The plugin

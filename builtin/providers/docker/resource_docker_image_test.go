@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/hashicorp/terraform/helper/resource"
+	"github.com/xanzy/terraform-api/helper/resource"
 )
 
 func TestAccDockerImage_basic(t *testing.T) {

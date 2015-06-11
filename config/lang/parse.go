@@ -3,7 +3,7 @@ package lang
 import (
 	"sync"
 
-	"github.com/hashicorp/terraform/config/lang/ast"
+	"github.com/xanzy/terraform-api/config/lang/ast"
 )
 
 var parserErrors []error

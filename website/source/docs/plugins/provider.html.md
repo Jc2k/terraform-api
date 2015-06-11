@@ -35,7 +35,7 @@ a basic development environment setup.
 ## Low-Level Interface
 
 The interface you must implement for providers is
-[ResourceProvider](https://github.com/hashicorp/terraform/blob/master/terraform/resource_provider.go).
+[ResourceProvider](https://github.com/xanzy/terraform-api/blob/master/terraform/resource_provider.go).
 
 This interface is extremely low level, however, and we don't recommend
 you implement it directly. Implementing the interface directly is error
@@ -58,14 +58,22 @@ the framework beforehand, but it goes to show how expressive the framework
 can be.
 
 The GoDoc for `helper/schema` can be
+<<<<<<< 90b6512e0dfda845dc2764003a66af08e71d369e
 [found here](https://godoc.org/github.com/hashicorp/terraform/helper/schema).
+=======
+[found here](http://godoc.org/github.com/xanzy/terraform-api/helper/schema).
+>>>>>>> Initial commit of a Terraform gRPC API
 This is API-level documentation but will be extremely important
 for you going forward.
 
 ## Provider
 
 The first thing to do in your plugin is to create the
+<<<<<<< 90b6512e0dfda845dc2764003a66af08e71d369e
 [schema.Provider](https://godoc.org/github.com/hashicorp/terraform/helper/schema#Provider) structure.
+=======
+[schema.Provider](http://godoc.org/github.com/xanzy/terraform-api/helper/schema#Provider) structure.
+>>>>>>> Initial commit of a Terraform gRPC API
 This structure implements the `ResourceProvider` interface. We
 recommend creating this structure in a function to make testing easier
 later. Example:
@@ -86,7 +94,11 @@ are documented within the godoc, but a brief overview is here as well:
 
   * `ResourcesMap` - The map of resources that this provider supports.
       All keys are resource names and the values are the
+<<<<<<< 90b6512e0dfda845dc2764003a66af08e71d369e
       [schema.Resource](https://godoc.org/github.com/hashicorp/terraform/helper/schema#Resource) structures implementing this resource.
+=======
+      [schema.Resource](http://godoc.org/github.com/xanzy/terraform-api/helper/schema#Resource) structures implementing this resource.
+>>>>>>> Initial commit of a Terraform gRPC API
 
   * `ConfigureFunc` - This function callback is used to configure the
       provider. This function should do things such as initialize any API
@@ -127,7 +139,11 @@ func resourceComputeAddress() *schema.Resource {
 ```
 
 Resources are described using the
+<<<<<<< 90b6512e0dfda845dc2764003a66af08e71d369e
 [schema.Resource](https://godoc.org/github.com/hashicorp/terraform/helper/schema#Resource)
+=======
+[schema.Resource](http://godoc.org/github.com/xanzy/terraform-api/helper/schema#Resource)
+>>>>>>> Initial commit of a Terraform gRPC API
 structure. This structure has the following fields:
 
   * `Schema` - The configuration schema for this resource. Schemas are
@@ -183,13 +199,17 @@ which cover all available settings.
 
 We recommend viewing schemas of existing or similar providers to learn
 best practices. A good starting place is the
-[core Terraform providers](https://github.com/hashicorp/terraform/tree/master/builtin/providers).
+[core Terraform providers](https://github.com/xanzy/terraform-api/tree/master/builtin/providers).
 
 ## Resource Data
 
 The parameter to provider configuration as well as all the CRUD operations
 on a resource is a
+<<<<<<< 90b6512e0dfda845dc2764003a66af08e71d369e
 [schema.ResourceData](https://godoc.org/github.com/hashicorp/terraform/helper/schema#ResourceData).
+=======
+[schema.ResourceData](http://godoc.org/github.com/xanzy/terraform-api/helper/schema#ResourceData).
+>>>>>>> Initial commit of a Terraform gRPC API
 This structure is used to query configurations as well as to set information
 about the resource such as its ID, connection information, and computed
 attributes.

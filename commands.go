@@ -4,8 +4,8 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/hashicorp/terraform/command"
 	"github.com/mitchellh/cli"
+	"github.com/xanzy/terraform-api/command"
 )
 
 // Commands is the mapping of all the available Terraform commands.
@@ -35,6 +35,13 @@ func init() {
 	}
 
 	Commands = map[string]cli.CommandFactory{
+		"api": func() (cli.Command, error) {
+			return &command.APICommand{
+				Meta:       meta,
+				ShutdownCh: makeShutdownCh(),
+			}, nil
+		},
+
 		"apply": func() (cli.Command, error) {
 			return &command.ApplyCommand{
 				Meta:       meta,

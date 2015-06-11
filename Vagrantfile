@@ -47,7 +47,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = "terraform"
 
   config.vm.provision "shell", inline: $script, privileged: false
-  config.vm.synced_folder '.', '/opt/gopath/src/github.com/hashicorp/terraform'
+  config.vm.synced_folder '.', '/opt/gopath/src/github.com/xanzy/terraform-api'
 
   ["vmware_fusion", "vmware_workstation"].each do |p|
     config.vm.provider p do |v|

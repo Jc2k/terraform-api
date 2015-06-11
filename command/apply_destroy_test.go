@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/cli"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestApply_destroy(t *testing.T) {

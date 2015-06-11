@@ -6,10 +6,10 @@ import (
 	"path"
 	"strings"
 
-	"github.com/hashicorp/terraform/helper/schema"
 	"github.com/vmware/govmomi"
 	"github.com/vmware/govmomi/find"
 	"github.com/vmware/govmomi/object"
+	"github.com/xanzy/terraform-api/helper/schema"
 	"golang.org/x/net/context"
 )
 

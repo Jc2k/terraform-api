@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/cyberdelia/heroku-go/v3"
-	"github.com/hashicorp/terraform/helper/resource"
-	"github.com/hashicorp/terraform/terraform"
+	"github.com/xanzy/terraform-api/helper/resource"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 func TestAccHerokuDomain_Basic(t *testing.T) {

@@ -10,10 +10,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/hashicorp/terraform/communicator/remote"
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/masterzen/winrm/winrm"
 	"github.com/packer-community/winrmcp/winrmcp"
+	"github.com/xanzy/terraform-api/communicator/remote"
+	"github.com/xanzy/terraform-api/terraform"
 
 	// This import is a bit strange, but it's needed so `make updatedeps` can see and download it
 	_ "github.com/dylanmei/winrmtest"

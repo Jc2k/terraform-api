@@ -7,7 +7,7 @@ import (
 	"log"
 
 	"github.com/DreamItGetIT/statuscake"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceStatusCakeTest() *schema.Resource {

@@ -7,9 +7,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/hashicorp/terraform/state"
-	"github.com/hashicorp/terraform/terraform"
 	"github.com/mitchellh/cli"
+	"github.com/xanzy/terraform-api/state"
+	"github.com/xanzy/terraform-api/terraform"
 )
 
 // Test disabling remote management

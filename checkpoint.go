@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 
 	"github.com/hashicorp/go-checkpoint"
-	"github.com/hashicorp/terraform/command"
+	"github.com/xanzy/terraform-api/command"
 )
 
 func init() {

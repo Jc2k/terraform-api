@@ -6,7 +6,7 @@ import (
 	"strconv"
 
 	"github.com/digitalocean/godo"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceDigitalOceanSSHKey() *schema.Resource {

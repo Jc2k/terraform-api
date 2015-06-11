@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/hashicorp/terraform/config/lang/ast"
 	"github.com/mitchellh/reflectwalk"
+	"github.com/xanzy/terraform-api/config/lang/ast"
 )
 
 func TestInterpolationWalker_detect(t *testing.T) {

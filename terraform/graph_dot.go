@@ -3,8 +3,8 @@ package terraform
 import (
 	"fmt"
 
-	"github.com/hashicorp/terraform/dag"
-	"github.com/hashicorp/terraform/dot"
+	"github.com/xanzy/terraform-api/dag"
+	"github.com/xanzy/terraform-api/dot"
 )
 
 // GraphNodeDotter can be implemented by a node to cause it to be included

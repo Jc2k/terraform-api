@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/cyberdelia/heroku-go/v3"
-	"github.com/hashicorp/terraform/helper/schema"
+	"github.com/xanzy/terraform-api/helper/schema"
 )
 
 func resourceHerokuCert() *schema.Resource {
