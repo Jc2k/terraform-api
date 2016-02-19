@@ -4,13 +4,13 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/xanzy/terraform-api/api/pb"
+	"github.com/xanzy/terraform-api/api/tfpb"
 	"golang.org/x/net/context"
 )
 
 // Refresh implements the TerraformServer interface
-func (s *Server) Refresh(c context.Context, req *pb.RefreshRequest) (*pb.RefreshResponse, error) {
-	resp := new(pb.RefreshResponse)
+func (s *Server) Refresh(c context.Context, req *tfpb.RefreshRequest) (*tfpb.RefreshResponse, error) {
+	resp := &tfpb.RefreshResponse{}
 
 	ctx, err := s.newContext(req.Config, false, nil, req.State, req.Parallelism, nil)
 	if err != nil {

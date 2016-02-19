@@ -6,14 +6,14 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/xanzy/terraform-api/api/pb"
+	"github.com/xanzy/terraform-api/api/tfpb"
 	"github.com/xanzy/terraform-api/terraform"
 	"golang.org/x/net/context"
 )
 
 // Taint implements the TerraformServer interface
-func (s *Server) Taint(c context.Context, req *pb.TaintRequest) (*pb.TaintResponse, error) {
-	resp := new(pb.TaintResponse)
+func (s *Server) Taint(c context.Context, req *tfpb.TaintRequest) (*tfpb.TaintResponse, error) {
+	resp := &tfpb.TaintResponse{}
 
 	if req.Module == "" {
 		req.Module = "root"
@@ -34,20 +34,14 @@ func (s *Server) Taint(c context.Context, req *pb.TaintRequest) (*pb.TaintRespon
 		return nil, fmt.Errorf("Module %s could not be found", req.Module)
 	}
 
-	// If there are no resources in this module, it is an error
-	if len(mod.Resources) == 0 {
-		return nil, fmt.Errorf("Module %s has no resources", req.Module)
+	// If there are no resources in this module, we can skip this all together
+	if len(mod.Resources) > 0 {
+		// Get the resource we're looking for and if it exists, then taint it
+		rs, ok := mod.Resources[req.Resource]
+		if ok {
+			rs.Taint()
+		}
 	}
-
-	// Get the resource we're looking for
-	rs, ok := mod.Resources[req.Resource]
-	if !ok {
-		return nil,
-			fmt.Errorf("Resource %s couldn't be found in the module %s", req.Resource, req.Module)
-	}
-
-	// Taint the resource and save the updated state
-	rs.Taint()
 
 	resp.State, err = json.Marshal(state)
 	if err != nil {

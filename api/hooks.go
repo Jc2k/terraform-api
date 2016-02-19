@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"sync"
 
-	"github.com/xanzy/terraform-api/api/pb"
+	"github.com/xanzy/terraform-api/api/tfpb"
 	"github.com/xanzy/terraform-api/terraform"
 )
 
@@ -13,8 +13,8 @@ type ApplyHook struct {
 	terraform.NilHook
 	sync.Mutex
 
-	stream pb.Terraform_ApplyServer
-	resp   *pb.ApplyResponse
+	stream tfpb.Terraform_ApplyServer
+	resp   *tfpb.ApplyResponse
 }
 
 // PreApply is called before a single resource is applied, it adds the new
@@ -26,7 +26,7 @@ func (h *ApplyHook) PreApply(
 	h.Lock()
 	defer h.Unlock()
 
-	h.resp.States[n.HumanId()] = pb.ResourceState_StateRunning
+	h.resp.States[n.HumanId()] = tfpb.ResourceState_StateRunning
 
 	// Write the new state over the connected gRPC stream
 	if err := h.stream.Send(h.resp); err != nil {
@@ -46,9 +46,9 @@ func (h *ApplyHook) PostApply(
 	defer h.Unlock()
 
 	if err != nil {
-		h.resp.States[n.HumanId()] = pb.ResourceState_StateError
+		h.resp.States[n.HumanId()] = tfpb.ResourceState_StateError
 	} else {
-		h.resp.States[n.HumanId()] = pb.ResourceState_StateSuccess
+		h.resp.States[n.HumanId()] = tfpb.ResourceState_StateSuccess
 	}
 
 	// Write the new state over the connected gRPC stream
@@ -87,7 +87,7 @@ type PlanHook struct {
 	terraform.NilHook
 	sync.Mutex
 
-	resp *pb.PlanResponse
+	resp *tfpb.PlanResponse
 }
 
 // PostDiff is triggered after each individual resource is diffed, and adds
@@ -100,15 +100,15 @@ func (h *PlanHook) PostDiff(
 
 	switch d.ChangeType() {
 	case terraform.DiffCreate:
-		h.resp.Actions[n.HumanId()] = pb.ResourceAction_ActionCreate
+		h.resp.Actions[n.HumanId()] = tfpb.ResourceAction_ActionCreate
 	case terraform.DiffUpdate:
-		h.resp.Actions[n.HumanId()] = pb.ResourceAction_ActionUpdate
+		h.resp.Actions[n.HumanId()] = tfpb.ResourceAction_ActionUpdate
 	case terraform.DiffDestroy:
-		h.resp.Actions[n.HumanId()] = pb.ResourceAction_ActionDestroy
+		h.resp.Actions[n.HumanId()] = tfpb.ResourceAction_ActionDestroy
 	case terraform.DiffDestroyCreate:
-		h.resp.Actions[n.HumanId()] = pb.ResourceAction_ActionRecreate
+		h.resp.Actions[n.HumanId()] = tfpb.ResourceAction_ActionRecreate
 	default:
-		h.resp.Actions[n.HumanId()] = pb.ResourceAction_ActionNone
+		h.resp.Actions[n.HumanId()] = tfpb.ResourceAction_ActionNone
 	}
 
 	return terraform.HookActionContinue, nil

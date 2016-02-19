@@ -5,15 +5,15 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/xanzy/terraform-api/api/pb"
+	"github.com/xanzy/terraform-api/api/tfpb"
 	"github.com/xanzy/terraform-api/terraform"
 	"golang.org/x/net/context"
 )
 
 // Plan implements the TerraformServer interface
-func (s *Server) Plan(c context.Context, req *pb.PlanRequest) (*pb.PlanResponse, error) {
-	resp := &pb.PlanResponse{
-		Actions: make(map[string]pb.ResourceAction),
+func (s *Server) Plan(c context.Context, req *tfpb.PlanRequest) (*tfpb.PlanResponse, error) {
+	resp := &tfpb.PlanResponse{
+		Actions: make(map[string]tfpb.ResourceAction),
 	}
 
 	hooks := []terraform.Hook{&PlanHook{

@@ -2,14 +2,14 @@ package api
 
 import (
 	"github.com/hashicorp/go-multierror"
-	"github.com/xanzy/terraform-api/api/pb"
+	"github.com/xanzy/terraform-api/api/tfpb"
 	"github.com/xanzy/terraform-api/config/module"
 	"golang.org/x/net/context"
 )
 
 // Validate implements the TerraformServer interface
-func (s *Server) Validate(c context.Context, req *pb.ValidateRequest) (*pb.ValidateResponse, error) {
-	resp := &pb.ValidateResponse{Valid: true}
+func (s *Server) Validate(c context.Context, req *tfpb.ValidateRequest) (*tfpb.ValidateResponse, error) {
+	resp := &tfpb.ValidateResponse{Valid: true}
 
 	ctx, err := s.newContext(req.Config, false, nil, nil, 0, nil)
 	if err != nil {
@@ -17,9 +17,12 @@ func (s *Server) Validate(c context.Context, req *pb.ValidateRequest) (*pb.Valid
 	}
 
 	if ws, es := ctx.Validate(); len(ws) > 0 || len(es) > 0 {
-		resp.Valid = false
 		resp.Warnings = ws
-		parseErrors(&resp.Errors, es)
+
+		if len(es) > 0 {
+			resp.Valid = false
+			parseErrors(&resp.Errors, es)
+		}
 	}
 
 	return resp, nil

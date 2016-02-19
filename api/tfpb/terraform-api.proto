@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package pb;
+package tfpb;
 
 // Interface exported by the server.
 service Terraform {
@@ -64,6 +64,7 @@ enum ResourceAction {
   ActionUpdate = 3;
   ActionDestroy = 4;
   ActionRecreate = 5;
+  ActionProvision = 6;
 }
 
 // PlanResponse represents a plan response

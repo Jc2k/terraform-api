@@ -10,7 +10,7 @@ import (
 	"strings"
 
 	"github.com/xanzy/terraform-api/api"
-	"github.com/xanzy/terraform-api/api/pb"
+	"github.com/xanzy/terraform-api/api/tfpb"
 	"google.golang.org/grpc"
 )
 
@@ -44,7 +44,7 @@ func (c *APICommand) Run(args []string) int {
 
 	// Create and register the gRPC server
 	grpcServer := grpc.NewServer()
-	pb.RegisterTerraformServer(grpcServer, s)
+	tfpb.RegisterTerraformServer(grpcServer, s)
 
 	go func() {
 		log.Println(http.ListenAndServe("localhost:6060", nil))

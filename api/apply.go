@@ -5,14 +5,14 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/xanzy/terraform-api/api/pb"
+	"github.com/xanzy/terraform-api/api/tfpb"
 	"github.com/xanzy/terraform-api/terraform"
 )
 
 // Apply implements the TerraformServer interface
-func (s *Server) Apply(req *pb.ApplyRequest, stream pb.Terraform_ApplyServer) error {
-	resp := &pb.ApplyResponse{
-		States: make(map[string]pb.ResourceState),
+func (s *Server) Apply(req *tfpb.ApplyRequest, stream tfpb.Terraform_ApplyServer) error {
+	resp := &tfpb.ApplyResponse{
+		States: make(map[string]tfpb.ResourceState),
 	}
 
 	if req.Destroy && req.Plan != nil {
