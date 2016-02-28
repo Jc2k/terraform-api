@@ -58,14 +58,14 @@ func (s *Server) Plan(c context.Context, req *tfpb.PlanRequest) (*tfpb.PlanRespo
 		return nil, fmt.Errorf("Error marshalling diff: %v", err)
 	}
 
+	// Check if we need to update the state serial
+	plan.State.IncrementSerialMaybe(oldState)
+	resp.Serial = plan.State.Serial
+
 	resp.State, err = json.Marshal(plan.State)
 	if err != nil {
 		return nil, fmt.Errorf("Error marshalling refreshed state: %v", err)
 	}
-
-	// Check if we need to update the state serial
-	plan.State.IncrementSerialMaybe(oldState)
-	resp.Serial = plan.State.Serial
 
 	return resp, nil
 }
