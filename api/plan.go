@@ -16,6 +16,11 @@ func (s *Server) Plan(c context.Context, req *tfpb.PlanRequest) (*tfpb.PlanRespo
 		Actions: make(map[string]tfpb.ResourceAction),
 	}
 
+	oldState, err := terraform.ReadState(bytes.NewReader(req.State))
+	if err != nil {
+		return nil, fmt.Errorf("Error reading state: %v", err)
+	}
+
 	hooks := []terraform.Hook{&PlanHook{
 		resp: resp,
 	}}
@@ -25,11 +30,6 @@ func (s *Server) Plan(c context.Context, req *tfpb.PlanRequest) (*tfpb.PlanRespo
 		return nil, err
 	}
 
-	// if ws, es := ctx.Validate(); len(ws) > 0 || len(es) > 0 {
-	// 	resp.Valid = false
-	// 	resp.Warnings = ws
-	// 	parseErrors(&resp.Errors, es)
-	// }
 	if err := validateContext(ctx); err != nil {
 		return nil, fmt.Errorf("Error validating context: %v", err)
 	}
@@ -62,6 +62,10 @@ func (s *Server) Plan(c context.Context, req *tfpb.PlanRequest) (*tfpb.PlanRespo
 	if err != nil {
 		return nil, fmt.Errorf("Error marshalling refreshed state: %v", err)
 	}
+
+	// Check if we need to update the state serial
+	plan.State.IncrementSerialMaybe(oldState)
+	resp.Serial = plan.State.Serial
 
 	return resp, nil
 }

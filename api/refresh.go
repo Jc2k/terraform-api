@@ -1,15 +1,22 @@
 package api
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 
 	"github.com/xanzy/terraform-api/api/tfpb"
+	"github.com/xanzy/terraform-api/terraform"
 	"golang.org/x/net/context"
 )
 
 // Refresh implements the TerraformServer interface
 func (s *Server) Refresh(c context.Context, req *tfpb.RefreshRequest) (*tfpb.RefreshResponse, error) {
+	oldState, err := terraform.ReadState(bytes.NewReader(req.State))
+	if err != nil {
+		return nil, fmt.Errorf("Error reading state: %v", err)
+	}
+
 	resp := &tfpb.RefreshResponse{}
 
 	ctx, err := s.newContext(req.Config, false, nil, req.State, req.Parallelism, nil)
@@ -21,12 +28,16 @@ func (s *Server) Refresh(c context.Context, req *tfpb.RefreshRequest) (*tfpb.Ref
 		return nil, fmt.Errorf("Error validating context: %v", err)
 	}
 
-	state, err := ctx.Refresh()
+	newState, err := ctx.Refresh()
 	if err != nil {
 		return nil, fmt.Errorf("Error refreshing state: %v", err)
 	}
 
-	resp.State, err = json.Marshal(state)
+	// Check if we need to update the state serial
+	newState.IncrementSerialMaybe(oldState)
+	resp.Serial = newState.Serial
+
+	resp.State, err = json.Marshal(newState)
 	if err != nil {
 		return nil, fmt.Errorf("Error marshalling refreshed state: %v", err)
 	}

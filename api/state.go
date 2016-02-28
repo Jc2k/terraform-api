@@ -13,12 +13,12 @@ import (
 func (s *Server) State(c context.Context, req *tfpb.StateRequest) (*tfpb.StateResponse, error) {
 	resp := &tfpb.StateResponse{}
 
-	state, err := json.Marshal(terraform.NewState())
+	newState, err := json.Marshal(terraform.NewState())
 	if err != nil {
 		return nil, fmt.Errorf("Error marshalling new state: %v", err)
 	}
 
-	resp.State = state
+	resp.State = newState
 
 	return resp, nil
 }

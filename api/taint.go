@@ -21,15 +21,17 @@ func (s *Server) Taint(c context.Context, req *tfpb.TaintRequest) (*tfpb.TaintRe
 		req.Module = "root." + req.Module
 	}
 
-	b := bytes.NewBuffer(req.State)
-	state, err := terraform.ReadState(b)
+	oldState, err := terraform.ReadState(bytes.NewReader(req.State))
 	if err != nil {
 		return nil, fmt.Errorf("Error reading state: %v", err)
 	}
 
+	// Create a new state to work with while keeping the old state unchanged
+	newState := oldState.DeepCopy()
+
 	// Get the proper module we want to taint
 	modPath := strings.Split(req.Module, ".")
-	mod := state.ModuleByPath(modPath)
+	mod := newState.ModuleByPath(modPath)
 	if mod == nil {
 		return nil, fmt.Errorf("Module %s could not be found", req.Module)
 	}
@@ -43,7 +45,11 @@ func (s *Server) Taint(c context.Context, req *tfpb.TaintRequest) (*tfpb.TaintRe
 		}
 	}
 
-	resp.State, err = json.Marshal(state)
+	// Check if we need to update the state serial
+	newState.IncrementSerialMaybe(oldState)
+	resp.Serial = newState.Serial
+
+	resp.State, err = json.Marshal(newState)
 	if err != nil {
 		return nil, fmt.Errorf("Error marshalling tainted state: %v", err)
 	}

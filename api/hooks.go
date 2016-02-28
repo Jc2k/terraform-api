@@ -13,8 +13,9 @@ type ApplyHook struct {
 	terraform.NilHook
 	sync.Mutex
 
-	stream tfpb.Terraform_ApplyServer
-	resp   *tfpb.ApplyResponse
+	oldState *terraform.State
+	stream   tfpb.Terraform_ApplyServer
+	resp     *tfpb.ApplyResponse
 }
 
 // PreApply is called before a single resource is applied, it adds the new
@@ -61,12 +62,16 @@ func (h *ApplyHook) PostApply(
 
 // PostStateUpdate continuously updates the state in a ApplyResponse
 // and sends the updated response to the calling gRPC client
-func (h *ApplyHook) PostStateUpdate(s *terraform.State) (terraform.HookAction, error) {
+func (h *ApplyHook) PostStateUpdate(newState *terraform.State) (terraform.HookAction, error) {
 	h.Lock()
 	defer h.Unlock()
 
-	if s != nil {
-		state, err := json.Marshal(s)
+	if newState != nil {
+		// Check if we need to update the state serial
+		newState.IncrementSerialMaybe(h.oldState)
+		h.resp.Serial = newState.Serial
+
+		state, err := json.Marshal(newState)
 		if err != nil {
 			return terraform.HookActionHalt, err
 		}

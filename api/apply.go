@@ -1,6 +1,7 @@
 package api
 
 import (
+	"bytes"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -19,9 +20,15 @@ func (s *Server) Apply(req *tfpb.ApplyRequest, stream tfpb.Terraform_ApplyServer
 		return errors.New("Destroy can't be called with a plan")
 	}
 
+	oldState, err := terraform.ReadState(bytes.NewReader(req.State))
+	if err != nil {
+		return fmt.Errorf("Error reading state: %v", err)
+	}
+
 	hooks := []terraform.Hook{&ApplyHook{
-		stream: stream,
-		resp:   resp,
+		oldState: oldState,
+		stream:   stream,
+		resp:     resp,
 	}}
 
 	ctx, err := s.newContext(req.Config, req.Destroy, req.Plan, req.State, req.Parallelism, hooks)
@@ -47,12 +54,16 @@ func (s *Server) Apply(req *tfpb.ApplyRequest, stream tfpb.Terraform_ApplyServer
 		}
 	}
 
-	state, err := ctx.Apply()
+	newState, err := ctx.Apply()
 	parseErrors(&resp.Errors, err)
 
 	// Make sure we send the last known state back to the client
-	if state != nil {
-		resp.State, err = json.Marshal(state)
+	if newState != nil {
+		// Check if we need to update the state serial
+		newState.IncrementSerialMaybe(oldState)
+		resp.Serial = newState.Serial
+
+		resp.State, err = json.Marshal(newState)
 		if err != nil {
 			return fmt.Errorf("Error marshalling final state: %v", err)
 		}
