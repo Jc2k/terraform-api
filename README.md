@@ -1,7 +1,7 @@
 Terraform-API
 =============
 
-#####This is an actively maintained fork from [Terraform](https://github.com/hashicorp/terraform) which adds a `terraform api`  command!
+#####This is a (hopelessly out-of-date) fork from [Terraform](https://github.com/hashicorp/terraform) which adds a `terraform api`  command. This fork will not be updated anymore as we switched our approach and are now using Terraform as a library in our TFAPI microservice. This way it's much easier to follow `master` without having to rebase and rewrite stuff all the time.
 
 The `api` command allows you to run Terraform as a RESTful API. The new command is build in such a way that it can easily be merged into master without any changes to the existing Terraform code. So if it turns out enough people have a need for the `api` command, there is a good chance it will be merged upstream. Until that time this fork will be maintained and updated to follow the Terraform releases.
 
